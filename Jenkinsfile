@@ -52,6 +52,9 @@ pipeline {
           }
           dir ('./Frontend') {
             container('nodejs') {
+			  sh "----"
+			  sh "pwd"
+			  sh "----"
               sh "npm run setup"
 			  sh "npm run build"
               sh "CI=true DISPLAY=:99 npm run test"
