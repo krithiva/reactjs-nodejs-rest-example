@@ -50,7 +50,7 @@ pipeline {
             // so we can retrieve the version in later steps
             sh "echo \$(jx-release-version) > VERSION"
           }
-          dir ('./frontend') {
+          dir ('./Frontend') {
             container('nodejs') {
               sh "npm run setup"
 			  sh "npm run build"
